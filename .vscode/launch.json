@@ -1,0 +1,40 @@
+{
+  "version": "0.2.0",
+  //NEED TO SET UP PROPER GDB
+  "miDebuggerPath": "c:\\cygwin64\\bin\\gdb.exe",
+  "configurations": [
+    {
+      "name": "Debug GDNative Library",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "C:\\Users\\joseferrer\\Documents\\Godot\\godot.exe",
+      "symbolSearchPath": "${workspaceFolder}\\project\\bin\\binaries\\win64\\*.pdb",
+      "args": [
+        "--path",
+        "${workspaceFolder}/project",
+        "-w",
+        "-d"
+      ],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "c:/Repos/CPPExampleProject/src",
+      "program": "c:/Repos/CPPExampleProject/src/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
